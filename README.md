@@ -1,4 +1,4 @@
-## Software quality and testing *Course*
+#### Software quality and testing *Course*
 
 I got the first touch with JUnit & PIT Mutation Testing in this course. 
 
