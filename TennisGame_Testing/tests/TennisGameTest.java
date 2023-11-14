@@ -48,8 +48,8 @@ public class TennisGameTest {
 		// Assert
 		assertEquals("Tie score incorrect", "deuce", score);
 	}
-
-	@Test(expected = TennisGameException.class)
+	
+	@Test
 	public void testTennisGame_getScore_ResultsExpection() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -69,12 +69,14 @@ public class TennisGameTest {
 		game.player2Scored();
 		assertEquals("30 - 40", game.getScore());
 	}
+	
+	
 	///////////////////////////////////////////
 	// PLAYER 1
 	///////////////////////////////////////////
 
 	// WON
-	@Test(expected = TennisGameException.class)
+	@Test
 	public void testTennisGame_Player1WinsPointAfterGameEnded_ResultsException() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -89,7 +91,7 @@ public class TennisGameTest {
 	}
 
 	// Advantage
-	@Test(expected = TennisGameException.class)
+	@Test
 	public void testTennisGame_Player1HasAdvantage_ResultsExpection() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -105,7 +107,7 @@ public class TennisGameTest {
 	}
 
 	// GAME ENDED
-	@Test(expected = TennisGameException.class)
+	@Test 
 	public void testTennisGame_Player1ScoredAfterGameEnded_ResultsException() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -114,23 +116,14 @@ public class TennisGameTest {
 			game.player1Scored();
 		}
 		// Act & Assert
-<<<<<<< Updated upstream
 		assertThrows(TennisGameException.class,() -> game.player1Scored());
-=======
-		try {
-			game.player1Scored();
-			fail("TennisGameException was not throws Exception");
-		} catch (TennisGameException e) {
-			throw new TennisGameException();
-		}
->>>>>>> Stashed changes
 	}
 	///////////////////////////////////////////
 	// PLAYER 2
 	///////////////////////////////////////////
 
 	// WON
-	@Test(expected = TennisGameException.class)
+	@Test
 	public void testTennisGame_Player2WinsPointAfterGameEnded_ResultsExpection() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -145,7 +138,7 @@ public class TennisGameTest {
 	}
 
 	// Advantage
-	@Test(expected = TennisGameException.class)
+	@Test 
 	public void testTennisGame_Player2HasAdvantage_ResultsExpection() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -161,7 +154,7 @@ public class TennisGameTest {
 	}
 
 	// GAME ENDED
-	@Test(expected = TennisGameException.class)
+	@Test 
 	public void testTennisGame_Player2ScoredAfterGameEnded_ResultsException() throws TennisGameException {
 		// Arrange
 		TennisGame game = new TennisGame();
@@ -170,16 +163,8 @@ public class TennisGameTest {
 			game.player2Scored();
 		}
 		// Act & Assert
-<<<<<<< Updated upstream
 		assertThrows(TennisGameException.class,() -> game.player2Scored());
-=======
-		try {
-			game.player2Scored();
-			fail("TennisGameException was not throws Exception");
-		} catch (TennisGameException e) {
-			throw new TennisGameException();
-		}
->>>>>>> Stashed changes
 	}
 
 }
+
